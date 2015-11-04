@@ -15,7 +15,7 @@ namespace EncriptografadorEnigma
             MessageBoxButtons botoes = MessageBoxButtons.OK;
             DialogResult resultado;
 
-            // Displays the MessageBox.
+            // Mostra a MessageBox.
 
             resultado = MessageBox.Show(mensagem, legenda, botoes);
             
@@ -27,7 +27,7 @@ namespace EncriptografadorEnigma
             MessageBoxButtons botoes = MessageBoxButtons.YesNo;
             DialogResult resultado;
 
-            // Displays the MessageBox.
+            // Mostra a MessageBox.
 
             resultado = MessageBox.Show(mensagem, legenda, botoes);
 
@@ -42,7 +42,6 @@ namespace EncriptografadorEnigma
 
             return inteiroRandomico;
             
-
         }
 
         // Função para checar se é número primo
