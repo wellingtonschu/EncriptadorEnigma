@@ -46,7 +46,7 @@ namespace EncriptografadorEnigma
             {
                 //take first character, change to number
                 processingItem = letterToNumberDecode(input.Substring(0, 1));
-                //encrypt processingItem
+                //encripta processingItem
                 processingItem = runEncrypt(processingItem);
                 //add processingItem, change to letter, and add to output
                 output = output + numberToLetterEncode(processingItem);
@@ -68,7 +68,7 @@ namespace EncriptografadorEnigma
             {
                 //take first character, change to number
                 processingItem = letterToNumberDecode(input.Substring(0, 1));
-                //decrypt processingItem
+                //decripta processingItem
                 processingItem = runDecrypt(processingItem);
                 //add processingItem, change to letter, and add to output
                 output = output + numberToLetterEncode(processingItem);
@@ -77,7 +77,7 @@ namespace EncriptografadorEnigma
             }
             rxtOutput.Text = output;
             output = "";
-            //lblRand2.Text = rotorII.randSeed[0].Next(10).ToString();
+            //lblRand2.Text = rotorII.sementeRandomica[0].Next(10).ToString();
         }
 
         public int runEncrypt(int encryptorInput)
@@ -86,16 +86,16 @@ namespace EncriptografadorEnigma
 
             //add rotorI rotation
             encryptorProcessingItem = (encryptorProcessingItem + rotation1) % length;
-            //rotorI encrypt
-            encryptorProcessingItem = rotorI.encrypt(encryptorProcessingItem);
+            //rotorI encripta
+            encryptorProcessingItem = rotorI.encripta(encryptorProcessingItem);
             //add rotorII rotation
             encryptorProcessingItem = (encryptorProcessingItem + rotation2) % length;
-            //rotorII encrypt
-            encryptorProcessingItem = rotorII.encrypt(encryptorProcessingItem);
+            //rotorII encripta
+            encryptorProcessingItem = rotorII.encripta(encryptorProcessingItem);
             //add rotorIII rotation
             encryptorProcessingItem = (encryptorProcessingItem + rotation3) % length;
-            //rotorIII encrypt
-            encryptorProcessingItem = rotorIII.encrypt(encryptorProcessingItem);
+            //rotorIII encripta
+            encryptorProcessingItem = rotorIII.encripta(encryptorProcessingItem);
             //increase rotorI rotation
             rotation1++;
             //increase rotorII rotation if rotorI rotation is divisible by 2 (every other time)
@@ -121,22 +121,22 @@ namespace EncriptografadorEnigma
         {
             int decryptorProcessingItem = decryptorInput;
 
-            //rotorIII decrypt
-            decryptorProcessingItem = rotorIII.decrypt(decryptorProcessingItem);
+            //rotorIII decripta
+            decryptorProcessingItem = rotorIII.decripta(decryptorProcessingItem);
             //subtract rotorIII rotation
             if ((decryptorProcessingItem - rotation3) >= 0)
                 decryptorProcessingItem = decryptorProcessingItem - rotation3;
             else
                 decryptorProcessingItem = (decryptorProcessingItem - rotation3) + length;
-            //rotorII decrypt
-            decryptorProcessingItem = rotorII.decrypt(decryptorProcessingItem);
+            //rotorII decripta
+            decryptorProcessingItem = rotorII.decripta(decryptorProcessingItem);
             //subtract rotorII rotation
             if ((decryptorProcessingItem - rotation2) >= 0)
                 decryptorProcessingItem = decryptorProcessingItem - rotation2;
             else
                 decryptorProcessingItem = (decryptorProcessingItem - rotation2) + length;
-            //rotorI decrypt
-            decryptorProcessingItem = rotorI.decrypt(decryptorProcessingItem);
+            //rotorI decripta
+            decryptorProcessingItem = rotorI.decripta(decryptorProcessingItem);
             //subtract rotorI rotation
             if ((decryptorProcessingItem - rotation1) >= 0)
                 decryptorProcessingItem = decryptorProcessingItem - rotation1;
