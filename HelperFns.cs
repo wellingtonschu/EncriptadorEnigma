@@ -9,78 +9,77 @@ namespace EncriptografadorEnigma
     public class HelperFns
     {
         
-        public static void MessageBoxOK(string message, string caption)
+        public static void MessageBoxOK(string mensagem, string legenda)
         {
             
-            MessageBoxButtons buttons = MessageBoxButtons.OK;
-            DialogResult result;
+            MessageBoxButtons botoes = MessageBoxButtons.OK;
+            DialogResult resultado;
 
             // Displays the MessageBox.
 
-            result = MessageBox.Show(message, caption, buttons);
+            resultado = MessageBox.Show(mensagem, legenda, botoes);
             
         }
 
-        public static void MessageBoxYesNo(string message, string caption)
+        public static void MessageBoxYesNo(string mensagem, string legenda)
         {
 
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result;
+            MessageBoxButtons botoes = MessageBoxButtons.YesNo;
+            DialogResult resultado;
 
             // Displays the MessageBox.
 
-            result = MessageBox.Show(message, caption, buttons);
+            resultado = MessageBox.Show(mensagem, legenda, botoes);
 
         }
 
-        public static int RandInt(int min, int max)
+        public static int intRandomico(int min, int max)
         {
-            Random randGen = new Random();
-            int randInt = 0;
+            Random geradorDeRandomico = new Random();
+            int inteiroRandomico = 0;
 
-            randInt = randGen.Next(min, max);
+            inteiroRandomico = geradorDeRandomico.Next(min, max);
 
-            return randInt;
+            return inteiroRandomico;
             
 
         }
 
-        // function to check if a number is a prime
-        public static bool PrimeCheck(int posPrime)
+        // Função para checar se é número primo
+        public static bool verificacaoDePrimo(int posicaoPrimo)
         {
-            // initialize local variables
-            bool bCheck = false; // always return false unless proven otherwise, covers the 1 and 0 case
-            int iPCheck = posPrime;
+            // Inicializa variável local
+            bool checaB = false; // Sempre retorana "false", salvo caso prove o contrário, abrange o caso 1 e 0
+            int checaIP = posicaoPrimo;
 
-        // loop over the number, counting down till 2
-          while (iPCheck > 1)
+        // Loop sobre o número, contagem regressiva até 2
+          while (checaIP > 1)
           {
-               // check for remainder and decrement if there is a remainder
-                if ((posPrime != 1) && (posPrime != 0) && (iPCheck != 2) &&((posPrime % (iPCheck - 1)) != 0))
+               // Verifica o resto e diminui se houver algum remanescente
+                if ((posicaoPrimo != 1) && (posicaoPrimo != 0) && (checaIP != 2) &&((posicaoPrimo % (checaIP - 1)) != 0))
                 {
-                    iPCheck--;
+                    checaIP--;
                 }
-                // else if no remainder, then the number is divisible
-                else if ((posPrime != 1) && (posPrime != 0) && (iPCheck  != 2) && ((posPrime % (iPCheck - 1)) == 0))
+                // Executado se não possui resto, portanto é divisivel
+                else if ((posicaoPrimo != 1) && (posicaoPrimo != 0) && (checaIP  != 2) && ((posicaoPrimo % (checaIP - 1)) == 0))
                 {
-                    bCheck = false;
+                    checaB = false;
                    break;
                 }
-                    // 2 is always a prime
-                else if (iPCheck == 2)
+                    // Executa se for 2, pois 2 sempre é primo
+                else if (checaIP == 2)
                 {
-                    bCheck = true;
+                    checaB = true;
                     break;
 
                 }
-                
-                
-           }
 
-            return bCheck;
+            }
+
+            return checaB;
         }
 
-        //checks if a certain string can be converted to an int
+        //Checa se certas Strings podem ser convertidas para int (Função de sistema)
         public static bool stiInputCheck(string s)
         {
             bool noException = true;
@@ -103,39 +102,39 @@ namespace EncriptografadorEnigma
             return noException;
         }
 
-        public static double DTR(double degrees)
+        public static double DTR(double graus)
         {
-            double rad = (double)(degrees * (Math.PI / 180.0));
+            double rad = (double)(graus * (Math.PI / 180.0));
             return rad;
         }
 
-        public static double RTD(double radians)
+        public static double RTD(double radianos)
         {
-            double deg = (double)(radians * (180 / Math.PI));
-            return deg;
+            double gra = (double)(radianos * (180 / Math.PI));
+            return gra;
         }
 
-        public static double RootXY(double root, double radicand)
+        public static double raizXY(double raiz, double radicando)
         {
-            double result = 0;
+            double resultado = 0;
 
-            result = Math.Pow(radicand, (1 / root));
+            resultado = Math.Pow(radicando, (1 / raiz));
 
-            return result;
+            return resultado;
         }
 
-        public static double Factorial(double n)
+        public static double Fatorial(double n)
         {
-            double result = n;
-            double counter = (n - 1);
+            double resultado = n;
+            double contador = (n - 1);
 
-            while (counter > 1)
+            while (contador > 1)
             {
-                result = result * counter;
-                counter--;
+                resultado = resultado * contador;
+                contador--;
             }
 
-            return result;
+            return resultado;
         }
 
     }

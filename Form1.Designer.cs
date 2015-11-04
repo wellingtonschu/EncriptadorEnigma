@@ -48,42 +48,42 @@
             this.lblInput.AutoSize = true;
             this.lblInput.Location = new System.Drawing.Point(12, 57);
             this.lblInput.Name = "lblInput";
-            this.lblInput.Size = new System.Drawing.Size(31, 13);
+            this.lblInput.Size = new System.Drawing.Size(44, 13);
             this.lblInput.TabIndex = 1;
-            this.lblInput.Text = "Input";
+            this.lblInput.Text = "Entrada";
             // 
             // lblOutput
             // 
             this.lblOutput.AutoSize = true;
             this.lblOutput.Location = new System.Drawing.Point(433, 57);
             this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(39, 13);
+            this.lblOutput.Size = new System.Drawing.Size(36, 13);
             this.lblOutput.TabIndex = 3;
-            this.lblOutput.Text = "Output";
+            this.lblOutput.Text = "Saída";
             // 
             // btnEncrypt
             // 
-            this.btnEncrypt.Location = new System.Drawing.Point(327, 534);
+            this.btnEncrypt.Location = new System.Drawing.Point(12, 187);
             this.btnEncrypt.Name = "btnEncrypt";
             this.btnEncrypt.Size = new System.Drawing.Size(75, 23);
             this.btnEncrypt.TabIndex = 4;
-            this.btnEncrypt.Text = "Encrypt";
+            this.btnEncrypt.Text = "Encripta";
             this.btnEncrypt.UseVisualStyleBackColor = true;
             this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
             // 
             // btnDecrypt
             // 
-            this.btnDecrypt.Location = new System.Drawing.Point(436, 534);
+            this.btnDecrypt.Location = new System.Drawing.Point(93, 187);
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(75, 23);
             this.btnDecrypt.TabIndex = 5;
-            this.btnDecrypt.Text = "Decrypt";
+            this.btnDecrypt.Text = "Decripta";
             this.btnDecrypt.UseVisualStyleBackColor = true;
             this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(381, 563);
+            this.btnReset.Location = new System.Drawing.Point(751, 187);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 6;
@@ -96,27 +96,27 @@
             this.lblRotorIStart.AutoSize = true;
             this.lblRotorIStart.Location = new System.Drawing.Point(12, 17);
             this.lblRotorIStart.Name = "lblRotorIStart";
-            this.lblRotorIStart.Size = new System.Drawing.Size(35, 13);
+            this.lblRotorIStart.Size = new System.Drawing.Size(47, 13);
             this.lblRotorIStart.TabIndex = 9;
-            this.lblRotorIStart.Text = "I Start";
+            this.lblRotorIStart.Text = "Chave 1";
             // 
             // lblRotorIIStart
             // 
             this.lblRotorIIStart.AutoSize = true;
             this.lblRotorIIStart.Location = new System.Drawing.Point(62, 17);
             this.lblRotorIIStart.Name = "lblRotorIIStart";
-            this.lblRotorIIStart.Size = new System.Drawing.Size(38, 13);
+            this.lblRotorIIStart.Size = new System.Drawing.Size(47, 13);
             this.lblRotorIIStart.TabIndex = 10;
-            this.lblRotorIIStart.Text = "II Start";
+            this.lblRotorIIStart.Text = "Chave 2";
             // 
             // lblRotorIIIStart
             // 
             this.lblRotorIIIStart.AutoSize = true;
             this.lblRotorIIIStart.Location = new System.Drawing.Point(111, 17);
             this.lblRotorIIIStart.Name = "lblRotorIIIStart";
-            this.lblRotorIIIStart.Size = new System.Drawing.Size(41, 13);
+            this.lblRotorIIIStart.Size = new System.Drawing.Size(47, 13);
             this.lblRotorIIIStart.TabIndex = 11;
-            this.lblRotorIIIStart.Text = "III Start";
+            this.lblRotorIIIStart.Text = "Chave 3";
             // 
             // txtRotorIStart
             // 
@@ -143,7 +143,7 @@
             // 
             this.rxtOutput.Location = new System.Drawing.Point(436, 73);
             this.rxtOutput.Name = "rxtOutput";
-            this.rxtOutput.Size = new System.Drawing.Size(390, 435);
+            this.rxtOutput.Size = new System.Drawing.Size(390, 108);
             this.rxtOutput.TabIndex = 15;
             this.rxtOutput.Text = "";
             // 
@@ -151,7 +151,7 @@
             // 
             this.rxtInput.Location = new System.Drawing.Point(12, 73);
             this.rxtInput.Name = "rxtInput";
-            this.rxtInput.Size = new System.Drawing.Size(390, 435);
+            this.rxtInput.Size = new System.Drawing.Size(390, 108);
             this.rxtInput.TabIndex = 16;
             this.rxtInput.Text = "";
             this.rxtInput.TextChanged += new System.EventHandler(this.rxtInput_TextChanged);
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 650);
+            this.ClientSize = new System.Drawing.Size(838, 218);
             this.Controls.Add(this.rxtInput);
             this.Controls.Add(this.rxtOutput);
             this.Controls.Add(this.txtRotorIIIStart);
@@ -175,7 +175,7 @@
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.lblInput);
             this.Name = "Enigma";
-            this.Text = "Enigma";
+            this.Text = "Encriptador";
             this.ResumeLayout(false);
             this.PerformLayout();
 
