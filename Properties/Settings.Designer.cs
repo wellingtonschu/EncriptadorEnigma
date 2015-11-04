@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EnigmaApp_v2.Properties {
+namespace EncriptografadorEnigma.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace EnigmaApp_v2
+namespace EncriptografadorEnigma
 {
     public partial class Enigma : Form
     {

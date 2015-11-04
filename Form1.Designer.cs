@@ -1,4 +1,4 @@
-﻿namespace EnigmaApp_v2
+﻿namespace EncriptografadorEnigma
 {
     partial class Enigma
     {
