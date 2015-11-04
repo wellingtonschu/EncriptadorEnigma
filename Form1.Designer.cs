@@ -1,6 +1,6 @@
 ﻿namespace EncriptografadorEnigma
 {
-    partial class Enigma
+    partial class Encriptografador
     {
         /// <summary>
         /// Required designer variable.
@@ -36,10 +36,10 @@
             this.lblRotorIStart = new System.Windows.Forms.Label();
             this.lblRotorIIStart = new System.Windows.Forms.Label();
             this.lblRotorIIIStart = new System.Windows.Forms.Label();
-            this.txtRotorIStart = new System.Windows.Forms.TextBox();
-            this.txtRotorIIStart = new System.Windows.Forms.TextBox();
-            this.txtRotorIIIStart = new System.Windows.Forms.TextBox();
-            this.rxtOutput = new System.Windows.Forms.RichTextBox();
+            this.inicioTextoChave1 = new System.Windows.Forms.TextBox();
+            this.inicioTextoChave2 = new System.Windows.Forms.TextBox();
+            this.inicioTextoChave3 = new System.Windows.Forms.TextBox();
+            this.rxtSaida = new System.Windows.Forms.RichTextBox();
             this.rxtInput = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             this.btnEncrypt.TabIndex = 4;
             this.btnEncrypt.Text = "Encripta";
             this.btnEncrypt.UseVisualStyleBackColor = true;
-            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
+            this.btnEncrypt.Click += new System.EventHandler(this.botaoEncriptaClique);
             // 
             // btnDecrypt
             // 
@@ -79,7 +79,7 @@
             this.btnDecrypt.TabIndex = 5;
             this.btnDecrypt.Text = "Decripta";
             this.btnDecrypt.UseVisualStyleBackColor = true;
-            this.btnDecrypt.Click += new System.EventHandler(this.btnDecrypt_Click);
+            this.btnDecrypt.Click += new System.EventHandler(this.botaoDecriptarClique);
             // 
             // btnReset
             // 
@@ -89,7 +89,7 @@
             this.btnReset.TabIndex = 6;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.btnReset.Click += new System.EventHandler(this.botaoResetClique);
             // 
             // lblRotorIStart
             // 
@@ -118,34 +118,34 @@
             this.lblRotorIIIStart.TabIndex = 11;
             this.lblRotorIIIStart.Text = "Chave 3";
             // 
-            // txtRotorIStart
+            // inicioTextoChave1
             // 
-            this.txtRotorIStart.Location = new System.Drawing.Point(12, 33);
-            this.txtRotorIStart.Name = "txtRotorIStart";
-            this.txtRotorIStart.Size = new System.Drawing.Size(32, 20);
-            this.txtRotorIStart.TabIndex = 12;
+            this.inicioTextoChave1.Location = new System.Drawing.Point(12, 33);
+            this.inicioTextoChave1.Name = "inicioTextoChave1";
+            this.inicioTextoChave1.Size = new System.Drawing.Size(32, 20);
+            this.inicioTextoChave1.TabIndex = 12;
             // 
-            // txtRotorIIStart
+            // inicioTextoChave2
             // 
-            this.txtRotorIIStart.Location = new System.Drawing.Point(65, 33);
-            this.txtRotorIIStart.Name = "txtRotorIIStart";
-            this.txtRotorIIStart.Size = new System.Drawing.Size(32, 20);
-            this.txtRotorIIStart.TabIndex = 13;
+            this.inicioTextoChave2.Location = new System.Drawing.Point(65, 33);
+            this.inicioTextoChave2.Name = "inicioTextoChave2";
+            this.inicioTextoChave2.Size = new System.Drawing.Size(32, 20);
+            this.inicioTextoChave2.TabIndex = 13;
             // 
-            // txtRotorIIIStart
+            // inicioTextoChave3
             // 
-            this.txtRotorIIIStart.Location = new System.Drawing.Point(118, 33);
-            this.txtRotorIIIStart.Name = "txtRotorIIIStart";
-            this.txtRotorIIIStart.Size = new System.Drawing.Size(32, 20);
-            this.txtRotorIIIStart.TabIndex = 14;
+            this.inicioTextoChave3.Location = new System.Drawing.Point(118, 33);
+            this.inicioTextoChave3.Name = "inicioTextoChave3";
+            this.inicioTextoChave3.Size = new System.Drawing.Size(32, 20);
+            this.inicioTextoChave3.TabIndex = 14;
             // 
-            // rxtOutput
+            // rxtSaida
             // 
-            this.rxtOutput.Location = new System.Drawing.Point(309, 73);
-            this.rxtOutput.Name = "rxtOutput";
-            this.rxtOutput.Size = new System.Drawing.Size(291, 108);
-            this.rxtOutput.TabIndex = 15;
-            this.rxtOutput.Text = "";
+            this.rxtSaida.Location = new System.Drawing.Point(309, 73);
+            this.rxtSaida.Name = "rxtSaida";
+            this.rxtSaida.Size = new System.Drawing.Size(291, 108);
+            this.rxtSaida.TabIndex = 15;
+            this.rxtSaida.Text = "";
             // 
             // rxtInput
             // 
@@ -154,18 +154,18 @@
             this.rxtInput.Size = new System.Drawing.Size(291, 108);
             this.rxtInput.TabIndex = 16;
             this.rxtInput.Text = "";
-            this.rxtInput.TextChanged += new System.EventHandler(this.rxtInput_TextChanged);
+            this.rxtInput.TextChanged += new System.EventHandler(this.rxtEntradaTextoAlterado);
             // 
-            // Enigma
+            // Encriptografador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(612, 216);
             this.Controls.Add(this.rxtInput);
-            this.Controls.Add(this.rxtOutput);
-            this.Controls.Add(this.txtRotorIIIStart);
-            this.Controls.Add(this.txtRotorIIStart);
-            this.Controls.Add(this.txtRotorIStart);
+            this.Controls.Add(this.rxtSaida);
+            this.Controls.Add(this.inicioTextoChave3);
+            this.Controls.Add(this.inicioTextoChave2);
+            this.Controls.Add(this.inicioTextoChave1);
             this.Controls.Add(this.lblRotorIIIStart);
             this.Controls.Add(this.lblRotorIIStart);
             this.Controls.Add(this.lblRotorIStart);
@@ -174,7 +174,7 @@
             this.Controls.Add(this.btnEncrypt);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.lblInput);
-            this.Name = "Enigma";
+            this.Name = "Encriptografador";
             this.Text = "Encriptador";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -191,10 +191,10 @@
         private System.Windows.Forms.Label lblRotorIStart;
         private System.Windows.Forms.Label lblRotorIIStart;
         private System.Windows.Forms.Label lblRotorIIIStart;
-        private System.Windows.Forms.TextBox txtRotorIStart;
-        private System.Windows.Forms.TextBox txtRotorIIStart;
-        private System.Windows.Forms.TextBox txtRotorIIIStart;
-        private System.Windows.Forms.RichTextBox rxtOutput;
+        private System.Windows.Forms.TextBox inicioTextoChave1;
+        private System.Windows.Forms.TextBox inicioTextoChave2;
+        private System.Windows.Forms.TextBox inicioTextoChave3;
+        private System.Windows.Forms.RichTextBox rxtSaida;
         private System.Windows.Forms.RichTextBox rxtInput;
 
     }

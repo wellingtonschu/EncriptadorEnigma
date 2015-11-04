@@ -15,7 +15,7 @@ namespace EncriptografadorEnigma
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Enigma());
+            Application.Run(new Encriptografador());
         }
     }
 }

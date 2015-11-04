@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace EncriptografadorEnigma
 {
-    public class HelperFns
+    public class Auxiliares
     {
         
         public static void MessageBoxOK(string mensagem, string legenda)
