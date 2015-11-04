@@ -46,7 +46,7 @@
             // lblInput
             // 
             this.lblInput.AutoSize = true;
-            this.lblInput.Location = new System.Drawing.Point(12, 57);
+            this.lblInput.Location = new System.Drawing.Point(9, 57);
             this.lblInput.Name = "lblInput";
             this.lblInput.Size = new System.Drawing.Size(44, 13);
             this.lblInput.TabIndex = 1;
@@ -55,7 +55,7 @@
             // lblOutput
             // 
             this.lblOutput.AutoSize = true;
-            this.lblOutput.Location = new System.Drawing.Point(433, 57);
+            this.lblOutput.Location = new System.Drawing.Point(306, 57);
             this.lblOutput.Name = "lblOutput";
             this.lblOutput.Size = new System.Drawing.Size(36, 13);
             this.lblOutput.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(751, 187);
+            this.btnReset.Location = new System.Drawing.Point(525, 187);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 6;
@@ -94,7 +94,7 @@
             // lblRotorIStart
             // 
             this.lblRotorIStart.AutoSize = true;
-            this.lblRotorIStart.Location = new System.Drawing.Point(12, 17);
+            this.lblRotorIStart.Location = new System.Drawing.Point(9, 17);
             this.lblRotorIStart.Name = "lblRotorIStart";
             this.lblRotorIStart.Size = new System.Drawing.Size(47, 13);
             this.lblRotorIStart.TabIndex = 9;
@@ -112,7 +112,7 @@
             // lblRotorIIIStart
             // 
             this.lblRotorIIIStart.AutoSize = true;
-            this.lblRotorIIIStart.Location = new System.Drawing.Point(111, 17);
+            this.lblRotorIIIStart.Location = new System.Drawing.Point(115, 17);
             this.lblRotorIIIStart.Name = "lblRotorIIIStart";
             this.lblRotorIIIStart.Size = new System.Drawing.Size(47, 13);
             this.lblRotorIIIStart.TabIndex = 11;
@@ -120,7 +120,7 @@
             // 
             // txtRotorIStart
             // 
-            this.txtRotorIStart.Location = new System.Drawing.Point(15, 33);
+            this.txtRotorIStart.Location = new System.Drawing.Point(12, 33);
             this.txtRotorIStart.Name = "txtRotorIStart";
             this.txtRotorIStart.Size = new System.Drawing.Size(32, 20);
             this.txtRotorIStart.TabIndex = 12;
@@ -134,16 +134,16 @@
             // 
             // txtRotorIIIStart
             // 
-            this.txtRotorIIIStart.Location = new System.Drawing.Point(114, 33);
+            this.txtRotorIIIStart.Location = new System.Drawing.Point(118, 33);
             this.txtRotorIIIStart.Name = "txtRotorIIIStart";
             this.txtRotorIIIStart.Size = new System.Drawing.Size(32, 20);
             this.txtRotorIIIStart.TabIndex = 14;
             // 
             // rxtOutput
             // 
-            this.rxtOutput.Location = new System.Drawing.Point(436, 73);
+            this.rxtOutput.Location = new System.Drawing.Point(309, 73);
             this.rxtOutput.Name = "rxtOutput";
-            this.rxtOutput.Size = new System.Drawing.Size(390, 108);
+            this.rxtOutput.Size = new System.Drawing.Size(291, 108);
             this.rxtOutput.TabIndex = 15;
             this.rxtOutput.Text = "";
             // 
@@ -151,7 +151,7 @@
             // 
             this.rxtInput.Location = new System.Drawing.Point(12, 73);
             this.rxtInput.Name = "rxtInput";
-            this.rxtInput.Size = new System.Drawing.Size(390, 108);
+            this.rxtInput.Size = new System.Drawing.Size(291, 108);
             this.rxtInput.TabIndex = 16;
             this.rxtInput.Text = "";
             this.rxtInput.TextChanged += new System.EventHandler(this.rxtInput_TextChanged);
@@ -160,7 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 218);
+            this.ClientSize = new System.Drawing.Size(612, 216);
             this.Controls.Add(this.rxtInput);
             this.Controls.Add(this.rxtOutput);
             this.Controls.Add(this.txtRotorIIIStart);
