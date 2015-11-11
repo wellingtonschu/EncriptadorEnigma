@@ -8,40 +8,30 @@ namespace EncriptografadorEnigma
 {
     public class Auxiliares
     {
-        
         public static void MessageBoxOK(string mensagem, string legenda)
         {
-            
             MessageBoxButtons botoes = MessageBoxButtons.OK;
             DialogResult resultado;
 
             // Mostra a MessageBox.
-
             resultado = MessageBox.Show(mensagem, legenda, botoes);
-            
         }
 
         public static void MessageBoxYesNo(string mensagem, string legenda)
         {
-
             MessageBoxButtons botoes = MessageBoxButtons.YesNo;
             DialogResult resultado;
 
             // Mostra a MessageBox.
-
             resultado = MessageBox.Show(mensagem, legenda, botoes);
-
         }
 
         public static int intRandomico(int min, int max)
         {
             Random geradorDeRandomico = new Random();
             int inteiroRandomico = 0;
-
             inteiroRandomico = geradorDeRandomico.Next(min, max);
-
             return inteiroRandomico;
-            
         }
 
         // Função para checar se é número primo
@@ -59,18 +49,19 @@ namespace EncriptografadorEnigma
                 {
                     checaIP--;
                 }
+
                 // Executado se não possui resto, portanto é divisivel
                 else if ((posicaoPrimo != 1) && (posicaoPrimo != 0) && (checaIP  != 2) && ((posicaoPrimo % (checaIP - 1)) == 0))
                 {
-                    checaB = false;
+                   checaB = false;
                    break;
                 }
-                    // Executa se for 2, pois 2 sempre é primo
+
+                // Executa se for 2, pois 2 sempre é primo
                 else if (checaIP == 2)
                 {
                     checaB = true;
                     break;
-
                 }
 
             }
@@ -86,16 +77,16 @@ namespace EncriptografadorEnigma
             try
             {
                 Convert.ToInt32(s);
-
             }
+
             catch (FormatException)
             {
                 noException = false;
             }
+
             catch (OverflowException)
             {
                 noException = false;
-
             }
 
             return noException;
@@ -116,9 +107,7 @@ namespace EncriptografadorEnigma
         public static double raizXY(double raiz, double radicando)
         {
             double resultado = 0;
-
             resultado = Math.Pow(radicando, (1 / raiz));
-
             return resultado;
         }
 
@@ -137,4 +126,5 @@ namespace EncriptografadorEnigma
         }
 
     }
+
 }

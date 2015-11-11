@@ -28,12 +28,7 @@ namespace EncriptografadorEnigma
         {
             InitializeComponent();
         }
-
-        private void entradaTextoAlterado(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void botaoEncriptaClique(object sender, EventArgs e)
         {
             rotacao1 = Convert.ToInt32(inicioTextoChave1.Text);
@@ -51,6 +46,7 @@ namespace EncriptografadorEnigma
                 //Remove o caracter transformado da sequência de caracteres
                 entrada = entrada.Remove(0,1);
             }
+
             rxtSaida.Text = saida;
             saida = "";
         }
@@ -72,6 +68,7 @@ namespace EncriptografadorEnigma
                 //Remove caracter processado pra String
                 entrada = entrada.Remove(0, 1);
             }
+
             rxtSaida.Text = saida;
             saida = "";
         }
@@ -187,5 +184,7 @@ namespace EncriptografadorEnigma
         {
 
         }
+
     }
+
 }

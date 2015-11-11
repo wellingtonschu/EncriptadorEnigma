@@ -27,6 +27,7 @@ namespace EncriptografadorEnigma
                     encriptacaoRotor[k] = -1;
                     decriptacaoRotor[k] = -1;
                 }
+
                 for (int i = 0; i < comprimentoDoRotor; i++)
                 {
                     while (checaRotor == false)
@@ -38,12 +39,14 @@ namespace EncriptografadorEnigma
                             if (encriptacaoRotor[j] == randomico1)
                                 checaRotor = false;
                         }
+
                     }
+
                     checaRotor = false;
                     encriptacaoRotor[i] = randomico1;
                     decriptacaoRotor[randomico1] = i;
-
                 }
+
         }
 
         public int encripta(int letra)
@@ -59,5 +62,7 @@ namespace EncriptografadorEnigma
             letraDecriptada = decriptacaoRotor[letra];
             return letraDecriptada;
         }
+
     }
+
 }

@@ -17,5 +17,7 @@ namespace EncriptografadorEnigma
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Encriptografador());
         }
+
     }
+
 }
